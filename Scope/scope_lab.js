@@ -27,6 +27,24 @@ function show(){
 }
 show();
     
-console.log(functionVar); // Throws ReferenceError
-console.log(functionLet); // Throws ReferenceError
-console.log(functionConst); // Throws ReferenceError
+// console.log(functionVar); // Throws ReferenceError
+// console.log(functionLet); // Throws ReferenceError
+// console.log(functionConst); // Throws ReferenceError
+
+{
+    var myTestBlockVar = "My test block-scoped var";
+    let myTestBlockLet = "My test block-scoped let";
+    const myTestBlockConst = "My test block-scoped const";
+
+    // myTestBlockVar = "New string for var"; // // cannot be reassigned within the same block
+    // myTestBlockLet = "New string for let"; // can be reassigned but not redeclared within the same block
+    // myTestBlockConst = "New string for const"; // cannot be reassigned or redeclared within the same block
+}
+
+myTestBlockVar = "New string for var";
+myTestBlockLet = "New string for let";
+myTestBlockConst = "New string for const";
+
+console.log(myTestBlockVar);
+console.log(myTestBlockLet);
+console.log(myTestBlockConst);
