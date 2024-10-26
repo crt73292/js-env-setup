@@ -50,3 +50,22 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
+
+let role = "Employee";
+let message;
+
+switch (role) {
+    case "Employee":
+        message = "You are authorized to have access to 'Dietary Services.'";
+        break;
+    case "Enrolled Member":
+        message = "You are authorized to have access to 'Dietary Services' and one-on-one interaction with a dietician.";
+        break;
+    case "Subscriber":
+        message = "You are authorized to have partial access to facilitate 'Dietary Services' only.";
+        break;
+    default:
+        message = "You need to enroll or at least subscribe first to avail this facility.";
+}
+
+console.log(message);
